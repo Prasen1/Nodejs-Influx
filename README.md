@@ -2,7 +2,6 @@
 Catchpoint Integration with InfluxDB
 ---
 ## Introduction
----
 InfluxDB works really well with observability tools like Grafana and more. We can use this integration to pull timeseries data from Catchpoint and store it in influxDB so that we can plot similar dashboards as Catchpoint.
 
 ### Prerequisites
@@ -38,6 +37,7 @@ InfluxDB works really well with observability tools like Grafana and more. We ca
 - In the same config_influx.js file, enter your InfluxDB organization name, bucket name, url and measurement name where the data will be stored. Please note that the organization and bucket should be created after installation of InfluxDB. The default Influx URL is http://localhost:8086
 
 ### How to run
+---
 - In the /Nodejs-Influx directory, run node insert_db.js after uncommenting the `var interval=setInterval(run,900000)` line in the same file
 or
 - Create a cronjob to run the insert_db.js script every 15 minutes
