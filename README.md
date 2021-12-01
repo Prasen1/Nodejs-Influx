@@ -40,7 +40,9 @@ InfluxDB works really well with observability tools like Grafana and more. We ca
 ### How to run
 ---
 - In the /Nodejs-Influx directory, run node insert_db.js after uncommenting the `var interval=setInterval(run,900000)` line in the same file
-or
+
+**or**
+
 - Create a cronjob to run the insert_db.js script every 15 minutes.
 
 **Please ensure that influx service is running**
