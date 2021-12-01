@@ -17,7 +17,9 @@ InfluxDB works really well with observability tools like Grafana and more. We ca
 ### - Configuration
 - In the config.js file under config sub-directory, enter your [Catchpoint API consumer key and secret](https://portal.catchpoint.com/ui/Content/Administration/ApiDetail.aspx)
 - In the tests object of the config.js file, enter the test IDs you want to pull the data for in array format. 
+
 *Example*
+
 ---
     tests: 
     {
@@ -39,7 +41,8 @@ InfluxDB works really well with observability tools like Grafana and more. We ca
 ---
 - In the /Nodejs-Influx directory, run node insert_db.js after uncommenting the `var interval=setInterval(run,900000)` line in the same file
 or
-- Create a cronjob to run the insert_db.js script every 15 minutes
+- Create a cronjob to run the insert_db.js script every 15 minutes.
+
 **Please ensure that influx service is running**
 
 
