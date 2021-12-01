@@ -16,12 +16,12 @@ InfluxDB works really well with observability tools like Grafana and more. We ca
 1. Copy the Nodejs-Influx folder to your machine
 2. Run npm install in the directory /Nodejs-Influx
 
-### -Configuration
+### - Configuration
 - In the config.js file under config sub-directory, enter your [Catchpoint API consumer key and secret](https://portal.catchpoint.com/ui/Content/Administration/ApiDetail.aspx)
 - In the tests object of the config.js file, enter the test IDs you want to pull the data for in array format. 
 *Example*
 ---
-`    tests: 
+    tests: 
     {
         web: [142613,142614,142615,142616],
         transaction: [142602,142603],
@@ -32,7 +32,7 @@ InfluxDB works really well with observability tools like Grafana and more. We ca
         websocket: [842700],
         smtp: [142604]
     }
-`
+
 ---
 - In the config_influx.js file, enter your [Influx API token](https://docs.influxdata.com/influxdb/cloud/security/tokens/create-token/)
 - In the same config_influx.js file, enter your InfluxDB organization name, bucket name, url and measurement name where the data will be stored. Please note that the organization and bucket should be created after installation of InfluxDB. The default Influx URL is http://localhost:8086
