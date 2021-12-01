@@ -1,7 +1,6 @@
 # Nodejs-Influx
 Catchpoint Integration with InfluxDB
 ---
-## Introduction
 InfluxDB works really well with observability tools like Grafana and more. We can use this integration to pull timeseries data from Catchpoint and store it in influxDB so that we can plot similar dashboards as Catchpoint.
 
 ### Prerequisites
