@@ -45,6 +45,6 @@ InfluxDB works really well with observability tools like Grafana and more. We ca
 
 - Create a cronjob to run the insert_db.js script every 15 minutes.
 
-**Please ensure that influx service is running**
+**Note: Please ensure that influx service is running**
 
 
