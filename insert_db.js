@@ -157,7 +157,7 @@ function convert_data(structure) {
             })
             lines.push(line)
         }
-        console.log(lines)
+        console.log(lines) //cronjob will store the lines written to influx in /logs/cronlog.log during last run
         return lines;
     }
     else {
