@@ -79,6 +79,9 @@ function fetch_Data(token, url) {
                     reject(json.Message)
                 } else {
                     log.info("<<Fetched Raw Test Data>>", url, "Raw Data Start Timestamp: " + json.start + " End Timestamp: " + json.end)
+                    if (json.hasOwnProperty('error')) {
+                        log.error(`${json.error}`,"<<Check Catchpoint configuration file>>")
+                        }
                     resolve(json)
                 }
 
