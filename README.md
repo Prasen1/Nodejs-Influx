@@ -15,8 +15,8 @@ This integration makes use of a Node.js script that runs at 15 minutes intervals
 2. Run npm install in the directory /Nodejs-Influx
 
 ### Configuration
-1. In the config.js file under config sub-directory, enter your [Catchpoint API consumer key and secret](https://portal.catchpoint.com/ui/Content/Administration/ApiDetail.aspx)
-2. In the tests object of the config.js file, enter the Test IDs you want to pull the data for in an array format. Please ensure to enter only the Test ID in the array belonging to the respective Test Type.
+1. In the config_catchpoint.js file under config sub-directory, enter your [Catchpoint API consumer key and secret](https://portal.catchpoint.com/ui/Content/Administration/ApiDetail.aspx)
+2. In the tests object of the config_catchpoint.js file, enter the Test IDs you want to pull the data for in an array format. Please ensure to enter only the Test ID in the array belonging to the respective Test Type.
 
 *Example:*
 
@@ -55,7 +55,7 @@ This integration makes use of a Node.js script that runs at 15 minutes intervals
     Nodejs-Influx/
     ├── auth_handler.js       ## Contains APIs related to authentication       
     ├── config
-    | ├── config.js           ## Configuration file for Catchpoint 
+    | ├── config_catchpoint.js           ## Configuration file for Catchpoint 
     | ├── config_influx.js    ## Configuration file for InfluxDB 
     ├── logs
     | ├── info
