@@ -2,7 +2,7 @@
 import fetch from 'node-fetch';
 import log from './utils/logger.js';
 import { get_token } from './auth_handler.js';
-import config from './config/config.js';
+import config from './config/config_catchpoint.js';
 import config_influx from './config/config_influx.js';
 import { InfluxDB } from '@influxdata/influxdb-client';
 import { convert } from 'json-to-line-protocol';
