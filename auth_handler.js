@@ -1,6 +1,6 @@
 // dependent packages and files required
 import fetch from 'node-fetch';
-import config from './config/config.js';
+import config from './config/config_catchpoint.js';
 import log from './utils/logger.js';
 
 const token_url = `${config.base_url}${config.token_path}`;
