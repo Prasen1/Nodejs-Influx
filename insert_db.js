@@ -80,8 +80,8 @@ function fetch_Data(token, url) {
                 } else {
                     log.info("<<Fetched Raw Test Data>>", url, "Raw Data Start Timestamp: " + json.start + " End Timestamp: " + json.end)
                     if (json.hasOwnProperty('error')) {
-                        log.error(`${json.error}`,"<<Check Catchpoint configuration file>>")
-                        }
+                        log.error(`${json.error}`, "<<Check Catchpoint configuration file>>")
+                    }
                     resolve(json)
                 }
 
@@ -125,6 +125,12 @@ function convert_data(structure) {
                     }
                     if (i == 'breakdown_2') {
                         temp.breakdown_tags[i] = value[i]['name']
+                    }
+                    if (i == 'hop_number') {
+                        temp.breakdown_tags[i] = value[i]
+                    }
+                    if (i == 'step') {
+                        temp.breakdown_tags[i] = value[i]
                     }
                 }
             }
