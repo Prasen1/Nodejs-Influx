@@ -7,7 +7,7 @@ var config =
     last_raw_path: 'api/v1/performance/raw?tests=',
     tests: 
     {
-        web: [123456,78910], //sample web test IDs
+        web: [], 
         transaction: [],
         api: [],
         ping: [],
