@@ -34,8 +34,8 @@ This integration makes use of a Node.js script that runs at 15 minutes intervals
     }
 
 ---
-- In the config_influx.js file, enter your [Influx API token](https://docs.influxdata.com/influxdb/cloud/security/tokens/create-token/)
-- In the same config_influx.js file, enter your InfluxDB organization name, bucket name, url and measurement name where the data will be stored. Note that the organization and bucket should be created after installation of InfluxDB. The default Influx URL is http://localhost:8086
+3. In the config_influx.js file, enter your [Influx API token](https://docs.influxdata.com/influxdb/cloud/security/tokens/create-token/)
+4. In the same config_influx.js file, enter your InfluxDB organization name, bucket name, url and measurement name where the data will be stored. Note that the organization and bucket should be created after installation of InfluxDB. The default Influx URL is http://localhost:8086
 
 ## How to run
 - In the /Nodejs-Influx directory, run `node insert_db.js` after uncommenting the `var interval=setInterval(run,900000)` and commenting out the `run()` line in the same file
