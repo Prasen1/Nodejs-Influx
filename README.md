@@ -3,7 +3,7 @@ Catchpoint Integration with InfluxDB
 ---
 InfluxDB is a high-performance time series database which can store hundreds of thousands of data points per second. This integration relies on a NodeJS/Python script that runs every 15 minutes to pull raw synthetic test performance data from Catchpoint's REST API and store it in InfluxDB. Once the data has been ingested, it can be viewed and analyzed using any compatible analytics tool (e.g. Grafana). 
 
-**Note: Right now, it has ability to pull data from one division per script setup. **
+**Note: Right now, it has ability to pull data from one division per script setup**
 
 ## Prerequisites
 1. NodeJS v16.x
