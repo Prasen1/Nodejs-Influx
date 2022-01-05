@@ -1,9 +1,9 @@
 # Nodejs-Influx
 Catchpoint Integration with InfluxDB
 ---
-InfluxDB works really well with observability tools like Grafana and more. We can use this integration to pull timeseries data from Catchpoint and store it in influxDB so that we can plot similar dashboards as Catchpoint.
+InfluxDB is a high-performance time series database which can store hundreds of thousands of data points per second. This integration relies on a NodeJS/Python script that runs every 15 minutes to pull raw synthetic test performance data from Catchpoint's REST API and store it in InfluxDB. Once the data has been ingested, it can be viewed and analyzed using any compatible analytics tool (e.g. Grafana). 
 
-This integration makes use of a Node.js script that runs at 15 minutes intervals to pull raw performance chart data from the Catchpoint GET: LastRaw API. It can be used to retrieve and store data for a list of tests in the same division. 
+**Note: Right now, it has ability to pull data from one division per script setup. **
 
 ## Prerequisites
 1. NodeJS v16.x
@@ -55,7 +55,7 @@ This integration makes use of a Node.js script that runs at 15 minutes intervals
     Nodejs-Influx/
     ├── auth_handler.js       ## Contains APIs related to authentication       
     ├── config
-    | ├── config_catchpoint.js           ## Configuration file for Catchpoint 
+    | ├── config_catchpoint.js## Configuration file for Catchpoint 
     | ├── config_influx.js    ## Configuration file for InfluxDB 
     ├── logs
     | ├── info
@@ -65,7 +65,7 @@ This integration makes use of a Node.js script that runs at 15 minutes intervals
     ├── utils
     | ├── logger.js           ## logger utility
     ├──package.json           ## project dependencies
-    └── node_monitor.js       ## main file
+    └── insert_db.js          ## main file
 
 
 Once the script starts running and data is inserted into InfluxDB, it can queried using [Flux queries](https://docs.influxdata.com/influxdb/v2.1/query-data/execute-queries/influx-api/) or visualized in graphs by opening the [Influx Data Explorer](https://docs.influxdata.com/influxdb/cloud/query-data/execute-queries/data-explorer/). 
